@@ -76,6 +76,11 @@
     font-size: 22px;
     margin-top: 35px;
   }
+  h3 {
+    color: #1a3d7c;
+    font-size: 18px;
+    margin-top: 25px;
+  }
   .box {
     border: 1px solid #ddd;
     padding: 20px;
@@ -86,6 +91,7 @@
   .hero-banner {
     width: 100%;
     max-width: 700px;
+    height: auto;
     display: block;
     margin: 20px auto;
     border-radius: 6px;
@@ -93,12 +99,14 @@
   .bundle-img {
     width: 100%;
     max-width: 320px;
+    height: auto;
     display: block;
     margin: 20px auto;
   }
   .product-img {
     width: 100%;
     max-width: 260px;
+    height: auto;
     display: block;
     margin: 15px auto;
   }
@@ -174,6 +182,93 @@
   table.compare tr:nth-child(even) {
     background: #fafafa;
   }
+  .packages-grid {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+  }
+  .package-card {
+    flex: 1;
+    min-width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    position: relative;
+  }
+  .package-card.featured {
+    border: 2px solid #2e8b57;
+  }
+  .package-card .pkg-label {
+    background: #e9e9e9;
+    color: #444;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 6px;
+    letter-spacing: 0.5px;
+  }
+  .package-card.featured .pkg-label {
+    background: #2e8b57;
+    color: #fff;
+  }
+  .package-card .pkg-body {
+    padding: 15px 12px 20px;
+  }
+  .package-card .pkg-qty {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .package-card .pkg-price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111;
+  }
+  .package-card .pkg-price span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #777;
+  }
+  .package-card .pkg-total {
+    font-size: 13px;
+    color: #555;
+    margin: 10px 0;
+  }
+  .package-card .pkg-bonus {
+    font-size: 12px;
+    color: #2e8b57;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  .bonus-grid {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .bonus-item {
+    flex: 1;
+    min-width: 240px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    background: #fafafa;
+    font-size: 13px;
+  }
+  .bonus-item .bonus-title {
+    font-weight: bold;
+    color: #1a3d7c;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .bonus-item .bonus-value {
+    color: #2e8b57;
+    font-weight: bold;
+    font-size: 12px;
+  }
   .faq-item {
     border-bottom: 1px solid #eee;
     padding: 12px 0;
@@ -191,6 +286,11 @@
     color: #888;
     text-align: center;
   }
+  @media (max-width: 600px) {
+    .packages-grid, .bonus-grid, .pros-cons {
+      flex-direction: column;
+    }
+  }
 </style>
 </head>
 <body>
@@ -207,7 +307,7 @@
 <h1>ProtoFlow Review: Natural Day &amp; Night Bladder Support Formula</h1>
 <p class="byline">Published by Editorial Staff | Compensation Disclosure: We may receive commissions from qualifying purchases made through links on this page. This is a paid review/advertisement.</p>
 
-<img src="banner-protoflow.png" alt="ProtoFlow supplement bottle" class="hero-banner">
+<img src="banner-protoflow.png" alt="ProtoFlow supplement bottle" class="hero-banner" width="700" height="350" fetchpriority="high">
 
 <p>Maintaining everyday comfort and healthy bladder habits has traditionally involved a wide range of approaches. In recent seasons, a growing number of men have been turning their attention toward natural, non-GMO botanical blends like ProtoFlow as part of their daily wellness routines. Below, we also compare it against another widely-discussed formula, ProstaVive, so you can see how the two stack up.</p>
 
@@ -234,9 +334,9 @@
     <td>30 days</td>
   </tr>
   <tr>
-    <td>Starting price</td>
-    <td><!-- PREENCHER: preço do ProtoFlow --></td>
-    <td>$79/bottle</td>
+    <td>Free digital bonuses</td>
+    <td>4 e-books (3 &amp; 6-bottle packages)</td>
+    <td>2 e-books (6-bottle package)</td>
   </tr>
   <tr>
     <td>Guarantee</td>
@@ -244,7 +344,7 @@
     <td>180 days</td>
   </tr>
 </table>
-<p style="font-size:12px;color:#888;">Prices and offers change frequently. Click through to each brand's site for current pricing.</p>
+<p style="font-size:12px;color:#888;">Pricing and package availability are shown on each brand's official site and can change at any time. Click through to see current offers.</p>
 
 <!-- PRODUTO 1: PROTOFLOW (principal) -->
 <div class="product-section" id="protoflow">
@@ -261,9 +361,54 @@
     </ul>
   </div>
 
-  <p>When considering natural formulas, it's worth checking ingredient transparency and current promotional pricing before deciding which product fits your routine. ProtoFlow is currently offered in single and multi-bottle bundles.</p>
+  <h3>Available Packages</h3>
+  <div class="packages-grid">
+    <div class="package-card">
+      <div class="pkg-label">BASIC PACKAGE</div>
+      <div class="pkg-body">
+        <div class="pkg-qty">2 bottles</div>
+        <div class="pkg-total">See current price on official site</div>
+      </div>
+    </div>
+    <div class="package-card featured">
+      <div class="pkg-label">MOST POPULAR</div>
+      <div class="pkg-body">
+        <div class="pkg-qty">3 bottles + 4 free e-books</div>
+        <div class="pkg-total">See current price on official site</div>
+        <div class="pkg-bonus">4 digital bonuses included</div>
+      </div>
+    </div>
+    <div class="package-card featured">
+      <div class="pkg-label">BEST VALUE</div>
+      <div class="pkg-body">
+        <div class="pkg-qty">6 bottles + 4 free e-books</div>
+        <div class="pkg-total">See current price on official site</div>
+        <div class="pkg-bonus">4 digital bonuses included</div>
+      </div>
+    </div>
+  </div>
 
-  <img src="protoflow-3pack.png" alt="ProtoFlow Super Savings Bundle" class="bundle-img">
+  <h3>Free Digital Bonuses (3 &amp; 6-bottle packages)</h3>
+  <div class="bonus-grid">
+    <div class="bonus-item">
+      <span class="bonus-title">Bonus 1: Supercharge Your Body</span>
+      An educational guide covering immune-system-focused habits and lifestyle adjustments.
+    </div>
+    <div class="bonus-item">
+      <span class="bonus-title">Bonus 2: Biohacking Secrets</span>
+      Covers approaches some men use to try to optimize energy and focus through lifestyle and technology.
+    </div>
+    <div class="bonus-item">
+      <span class="bonus-title">Bonus 3: 10 Ways to Turbocharge Your Testosterone</span>
+      A guide discussing natural approaches some men explore related to testosterone and energy levels.
+    </div>
+    <div class="bonus-item">
+      <span class="bonus-title">Bonus 4: 24-Hour Detox Guide</span>
+      A one-day guide covering general detox habits and nutrition tips.
+    </div>
+  </div>
+
+  <img src="protoflow-3pack.png" alt="ProtoFlow Super Savings Bundle" class="bundle-img" width="320" height="320" loading="lazy">
 
   <div class="pros-cons">
     <div>
@@ -271,6 +416,7 @@
       <ul>
         <li>Simple capsule format</li>
         <li>Well-known botanical ingredients</li>
+        <li>4 free digital bonuses on 3 &amp; 6-bottle packages</li>
       </ul>
     </div>
     <div>
@@ -283,9 +429,9 @@
   </div>
 
   <div class="cta-box" id="buy-now">
-    <p class="title">Check Current Availability &amp; Pricing:</p>
-    <a href="https://338cc04c28iqd8pizixbhcxgfz.hop.clickbank.net" class="cta-button">CHECK CURRENT PRICE &gt;&gt;</a>
-    <p class="cta-sub">NON-GMO &nbsp;•&nbsp; NATURAL INGREDIENTS</p>
+    <p class="title">Check Prices, Packages &amp; Bonuses Available Now:</p>
+    <a href="https://3d069--4z6ciofqc5f0dritq1a.hop.clickbank.net" class="cta-button">CHECK CURRENT PRICE &gt;&gt;</a>
+    <p class="cta-sub">3 &amp; 6-BOTTLE PACKAGES INCLUDE FREE DIGITAL BONUSES</p>
   </div>
 </div>
 
@@ -293,7 +439,7 @@
 <div class="product-section" id="prostavive">
   <h2>2. ProstaVive</h2>
 
-  <img src="prostavive-3pack.png" alt="ProstaVive supplement bundle" class="product-img">
+  <img src="prostavive-3pack.png" alt="ProstaVive supplement bundle" class="product-img" width="260" height="260" loading="lazy">
 
   <p>ProstaVive is offered in a powder format, mixed into water or a drink of choice. The brand highlights ingredients such as nettle root, cordyceps, and Panax ginseng — botanicals commonly featured in men's wellness formulas.</p>
 
@@ -303,6 +449,44 @@
       <li><strong>Nettle Root &amp; Cordyceps:</strong> Traditional ingredients associated with men's urinary wellness routines.</li>
       <li><strong>Panax Ginseng &amp; Boron:</strong> Commonly discussed for general vitality support.</li>
     </ul>
+  </div>
+
+  <h3>Available Packages</h3>
+  <div class="packages-grid">
+    <div class="package-card">
+      <div class="pkg-label">SAMPLE PACKAGE</div>
+      <div class="pkg-body">
+        <div class="pkg-qty">1 bottle · 30-day supply</div>
+        <div class="pkg-total">See current price on official site</div>
+      </div>
+    </div>
+    <div class="package-card">
+      <div class="pkg-label">GREAT OFFER</div>
+      <div class="pkg-body">
+        <div class="pkg-qty">3 bottles · 90-day supply</div>
+        <div class="pkg-total">See current price on official site</div>
+      </div>
+    </div>
+    <div class="package-card featured">
+      <div class="pkg-label">MOST POPULAR</div>
+      <div class="pkg-body">
+        <div class="pkg-qty">6 bottles · 180-day supply</div>
+        <div class="pkg-total">See current price on official site</div>
+        <div class="pkg-bonus">2 digital bonuses included</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Free Digital Bonuses (6-bottle package)</h3>
+  <div class="bonus-grid">
+    <div class="bonus-item">
+      <span class="bonus-title">Bonus 1: Prostate Health Smoothies</span>
+      A recipe guide with smoothie ideas some men incorporate into daily routines.
+    </div>
+    <div class="bonus-item">
+      <span class="bonus-title">Bonus 2: Healthy Sex Drive Plan</span>
+      A guide covering general lifestyle tips related to libido.
+    </div>
   </div>
 
   <div class="pros-cons">
@@ -323,14 +507,14 @@
   </div>
 
   <div class="cta-box">
-    <p class="title">Check Current Availability &amp; Pricing:</p>
-    <a href="https://a74039wap6phs8mk2a88-93s60.hop.clickbank.net" class="cta-button">CHECK CURRENT PRICE &gt;&gt;</a>
-    <p class="cta-sub">NON-GMO &nbsp;•&nbsp; NATURAL INGREDIENTS</p>
+    <p class="title">Check Prices, Packages &amp; Bonuses Available Now:</p>
+    <a href="https://63960-uh20lpgbeo5j860b6sbj.hop.clickbank.net" class="cta-button">CHECK CURRENT PRICE &gt;&gt;</a>
+    <p class="cta-sub">6-BOTTLE PACKAGE INCLUDES FREE DIGITAL BONUSES</p>
   </div>
 </div>
 
 <h2 id="how-to-choose">What to Look For When Comparing Options</h2>
-<p>Format (capsule vs. powder) is mostly a personal preference, not a quality signal. Compare price per serving — not just per bottle — since multi-bottle bundles often lower the per-unit cost.</p>
+<p>Format (capsule vs. powder) is mostly a personal preference, not a quality signal. Compare price per serving — not just per bottle — since multi-bottle bundles often lower the per-unit cost. Also factor in whether digital bonuses matter to you, and check each brand's stated refund window before buying.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-item">
@@ -347,7 +531,7 @@
 </div>
 <div class="faq-item">
   <strong>Do you recommend one over the other?</strong>
-  We don't rank these as "best." This page is meant to help you compare based on your own priorities — format, price, and ingredients. The choice is yours.
+  We don't rank these as "best." This page is meant to help you compare based on your own priorities — format, price, bonuses, and ingredients. The choice is yours.
 </div>
 
 <footer>
