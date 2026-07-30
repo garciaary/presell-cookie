@@ -216,5 +216,22 @@
   </div>
 </div>
 
+<script>
+  // Repassa o gclid (ID de clique do Google Ads) para os links de afiliado do ClickBank,
+  // necessário para a integração de conversões ClickBank <> Google Ads funcionar.
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var gclid = params.get('gclid');
+    if (!gclid) return;
+
+    var affiliateLinks = document.querySelectorAll('a[href*="hop.clickbank.net"]');
+    affiliateLinks.forEach(function(link) {
+      var url = new URL(link.href);
+      url.searchParams.set('gclid', gclid);
+      link.href = url.toString();
+    });
+  })();
+</script>
+
 </body>
 </html>
