@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,44 +17,74 @@
     .btn-cta { display: inline-block; background: #e02424; color: #fff; font-weight: bold; text-decoration: none; padding: 14px 35px; font-size: 18px; border-radius: 4px; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
     footer { background: #1b365d; color: #fff; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 12px; }
     footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
-    .disclaimer { font-size: 10px; color: #ccc; margin-top: 15px; text-align: justify; line-height: 1.4; }
+    .disclaimer { font-size: 12px; color: #cfd8e6; margin-top: 15px; text-align: justify; line-height: 1.5; }
   </style>
 </head>
 <body>
-
 <div class="container">
   <div class="brand-header">NextPick Guides</div>
-  
+
   <h1>Improving Your Sleep Quality with Ergonomic Support</h1>
-  
+
   <div class="img-container">
-    <img src="https://nextpickguides.com" alt="Proper Sleep Posture Alignment" width="620">
+    <img src="https://nextpickguides.com/sleep-posture.png" alt="Proper Sleep Posture Alignment" width="620">
   </div>
-  
+
   <p>Many individuals deal with morning stiffness and neck fatigue without realizing their pillow choice plays a major role. Standard sleeping arrangements often fail to maintain the natural curvature of the spine during rest.</p>
-  
+
   <div class="img-container">
-    <img src="https://nextpickguides.com" alt="Ergonomic Memory Foam Pillow Design" width="620">
+    <img src="https://nextpickguides.com/ergonomic-design.png" alt="Ergonomic Memory Foam Pillow Design" width="620">
   </div>
-  
+
   <p>Ergonomic memory foam solutions contour to your unique head and neck shape, providing structured relief whether you prefer sleeping on your back, side, or stomach. Investing in proper alignment can significantly promote better nighttime habits and refreshed mornings.</p>
 
   <div class="cta-box">
     <h3>Looking for the Original Ergonomic Contour Pillow?</h3>
     <p>Discover features, customer testimonials, and verified seasonal offers directly on the official manufacturer's store.</p>
-    <a href="https://585356tdw5pel2i6kfvjbd0f0q.hop.clickbank.net" class="btn-cta" target="_blank" rel="noopener nofollow">Check Official Availability</a>
+    <a href="https://9e6d0338r2nll8p3jpj9h758ym.hop.clickbank.net"
+       class="btn-cta"
+       target="_blank"
+       rel="noopener nofollow"
+       onclick="trackHopClick('cta-box-main')">Check Official Availability</a>
   </div>
 </div>
-
 <footer>
   <p>&copy; 2026 NextPick Guides. All rights reserved.</p>
   <p>| Independent Publisher |</p>
   <p class="disclaimer">Affiliate Disclosure: As an independent marketing site, we may earn a commission from qualifying purchases made through our referral links, at no additional cost to you. This site is not part of the Google website or Google Inc.</p>
   <p>
-    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms of Use</a>
   </p>
 </footer>
 
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xxssla849e");
+</script>
+
+<!-- Tracking de clique no hoplink: envia evento pro Clarity (custom tag) e, se existir, pro gtag/Google Ads -->
+<script type="text/javascript">
+  function trackHopClick(position) {
+    try {
+      if (window.clarity) {
+        window.clarity("set", "hoplink_click", position);
+        window.clarity("event", "hoplink_click_" + position);
+      }
+    } catch (e) {}
+    try {
+      if (typeof gtag === "function") {
+        gtag("event", "hoplink_click", {
+          event_category: "affiliate",
+          event_label: position
+        });
+      }
+    } catch (e) {}
+  }
+</script>
 </body>
-</html>
+</html
